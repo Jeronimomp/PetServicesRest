@@ -1,4 +1,4 @@
-#Author: angeldavvid41@gmail.com
+#Author: angel.marzola@sofka.com.co
 @tag
 Feature: Validar informacion de empleados  usando Serenity Rest
   Yo como automatizador
