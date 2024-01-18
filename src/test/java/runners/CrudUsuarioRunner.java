@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         glue = {"stepdefinitions","SetUp"},
         features = "src/test/resources/features/EscenariosRest.feature",
-        snippets = CucumberOptions.SnippetType.CAMELCASE, tags = "@crear"
+        snippets = CucumberOptions.SnippetType.CAMELCASE//, tags = "@crear"
 )
 public class CrudUsuarioRunner {
 }
