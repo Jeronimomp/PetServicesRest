@@ -30,4 +30,3 @@ Feature: Validar informacion de empleados  usando Serenity Rest
 
     Then se observa el servicio de eliminacion responde con 200
 
-##-----------------------
