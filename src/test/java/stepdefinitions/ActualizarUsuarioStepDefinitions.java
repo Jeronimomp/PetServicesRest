@@ -1,5 +1,5 @@
 package stepdefinitions;
-import Exceptions.EmployeeException;
+import Exceptions.UserException;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import net.serenitybdd.screenplay.GivenWhenThen;
@@ -9,7 +9,7 @@ import questions.ValidarActualizacion;
 import tasks.ActualizarUsuarioPet;
 import tasks.ConsultarPet;
 
-import static Exceptions.EmployeeException.MESSAGE;
+import static Exceptions.UserException.MESSAGE;
 
 public class ActualizarUsuarioStepDefinitions {
 
@@ -23,6 +23,6 @@ public class ActualizarUsuarioStepDefinitions {
     @Then("se valida que el usuario es actualizado con codigo {int}")
     public void seValidaQueElUsuarioEsActualizadoConCodigo(Integer statusCode) {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidarActualizacion.porStatusCode(), Matchers.equalTo(statusCode))
-                .orComplainWith(EmployeeException.class, MESSAGE));
+                .orComplainWith(UserException.class, MESSAGE));
     }
 }

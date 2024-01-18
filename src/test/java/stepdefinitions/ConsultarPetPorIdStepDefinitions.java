@@ -1,6 +1,6 @@
 package stepdefinitions;
 
-import Exceptions.EmployeeException;
+import Exceptions.UserException;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import net.serenitybdd.screenplay.GivenWhenThen;
@@ -9,7 +9,7 @@ import org.hamcrest.Matchers;
 import questions.ValidarUsuarioPorUsername;
 import tasks.ConsultarPet;
 
-import static Exceptions.EmployeeException.MESSAGE;
+import static Exceptions.UserException.MESSAGE;
 
 public class ConsultarPetPorIdStepDefinitions {
 
@@ -24,6 +24,6 @@ public class ConsultarPetPorIdStepDefinitions {
 
 
      OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidarUsuarioPorUsername.porstatusCode(), Matchers.equalTo(statusCode))
-             .orComplainWith(EmployeeException.class, MESSAGE));
+             .orComplainWith(UserException.class, MESSAGE));
     }
 }
