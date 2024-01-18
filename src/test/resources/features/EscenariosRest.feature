@@ -15,18 +15,18 @@ Feature: Validar informacion de empleados  usando Serenity Rest
 
   @buscarPorId
   Scenario: Consultar un usuario creado por username
-    When consultar usuario con username "Angel"
+    When consultar usuario con username "angelm6a"
     Then Se observa el codigo de respuesta con codigo 200
 
 
   @actualizar
   Scenario: Actualizar usuario de forma exitosa
-    When se manda el username del usuario a actualizar "Angel"
+    When se manda el username del usuario a actualizar "angelm6a"
     Then se valida que el usuario es actualizado con codigo 200
 
   @eliminar
   Scenario: Eliminar un usuario por Username de manera exitosa
-    When se busca el usuario a eliminar por username "Angel"
+    When se busca el usuario a eliminar por username "angelm6a"
 
     Then se observa el servicio de eliminacion responde con 200
 
